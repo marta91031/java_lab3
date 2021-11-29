@@ -1,26 +1,36 @@
+import java.util.ArrayList;
+import java.util.List;
+
 public class Main {
 
     public static void main(String[] args) {
         /* ćw 4 klasy */
 
-        /* zad.1
-            a) Stworzyć klasę Osoba z polami prywatnymi:
-            - imie (String),
-            - nazwisko (String),
-            - indeks (Integer)
+        ArrayList <Student> students = new ArrayList<Student>();
 
-            b) stworzyc konstruktory, gettery i settery
-            c) napisać metodę w klasie Osoba która zwróci informację o osobie,
-         */
+        Osoba o1 = new Osoba ("Marta", "Kwiatkowska", 63834);
+        Osoba o2 = new Osoba("Zuzanna", "Jabłońska", 47935);
+        Osoba o3 = new Osoba("Harry", "Potter", 76543);
+        Osoba o4 = new Osoba("Remigiusz", "Wojtkowiak", 74732);
+        Osoba o5 = new Osoba("Anita", "Wołoszczyk", 73744);
 
-        /* zad.2
-            a) Stworzyć klasę Student z polami prywatnymi
-            - Osoba osoba,
-            - WydzialEnum wydzial;
-            b) stworzyć enum WydzialEnum (w nowym pliku) z kilkoma polami,
-            c) stworzyc konstruktory, gettery i settery
-            d) nadpisać metodę toString aby zwracała wszystkie elementy ładnie przedstawione :)
-         */
+        Student s1 = new Student(o1, WydzialEnum.Matematyki);
+        Student s2 = new Student(o2, WydzialEnum.Ekonomii);
+        Student s3 = new Student(o3, WydzialEnum.ETI);
+        Student s4 = new Student(o4,WydzialEnum.Mechaniczny);
+        Student s5 = new Student(o5, WydzialEnum.Oceanotechniki);
+
+        students.add(s1);
+        students.add(s2);
+        students.add(s3);
+        students.add(s4);
+        students.add(s5);
+
+        for (Student s:students) {
+            System.out.println(s.toString());
+            System.out.println("------------------------------------------");
+        }
+
 
         /* zad.3
             a) W klasie Main stworzyć 5 różnych studentów, (można za pomocą tego samego objektu)
