@@ -1,3 +1,7 @@
+import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.StreamSupport;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -14,5 +18,20 @@ public class Main {
             oraz stworzyć listę typu najbardziej generycznego np. List<Budynek>
          */
 
+        Pojazd p1 = new Pojazd("fioletowy", 675445, 1);
+        Samochod s1 = new Samochod("czerwony", 45335, 5);
+        Rower r1 = new Rower("biały", 117, 3, true);
+        Rower r2 = new Rower("niebieski", 787, 2);
+
+        List <Pojazd> pojazdy = new ArrayList<Pojazd>();
+        pojazdy.add(p1);
+        pojazdy.add(s1);
+        pojazdy.add(r1);
+        pojazdy.add(r2);
+
+        for (Pojazd poj:pojazdy) {
+            System.out.println(poj.toString());
+            System.out.println("--------------------");
+        }
     }
 }
